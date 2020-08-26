@@ -1,0 +1,85 @@
+.sixty-six{
+
+ 
+  &__inner{
+    position: absolute;
+    top: calc(16.64% - 10px);
+    color: black;
+    margin-right: 20px;
+    max-width: 284px;
+
+    @include respond-to(md){
+      max-width: 244px;
+    }    
+  }
+
+  &__header{
+    opacity: 0;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 10px;
+    transform: translate(0px, 30vh);
+
+    @include respond-to(md){
+      margin-top: -28px;
+    }
+
+  }
+
+  &__date{
+    opacity: 0;
+    font-size: 12px;
+    margin-bottom: 2px;
+
+    @include respond-to(md){
+      margin-left: -53px;
+    }
+  }
+
+  &__copy{
+    opacity: 0;
+    font-size: 14px;
+    transform: translate(0px, 30vh);
+  }
+
+  &__image-wrap{
+    height: calc(100% - 8.32%);
+    position: relative;
+    margin-right: 20px;
+  }
+
+  &__image-one{
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    width: calc(100%);
+    background-color: green;
+    padding-top: calc(100%);
+    background-image: url("../img/sixty-six.png");
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: translate(0px, 30vh);
+
+    @media (min-width: 363px){
+      width: 284px;
+      height: 44%;
+      padding: 0;
+    }
+
+    @include respond-to(md){
+      background-position: bottom;
+      left: 342px;
+      height: 65vh;
+      width: 45vh;
+      position: absolute;
+      bottom: 6vh;
+    }
+
+    @include respond-to(lg){      
+      width: 54vh;
+      right: 29vh;
+      left: auto;  
+    }
+  }
+}

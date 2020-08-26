@@ -1,0 +1,68 @@
+.hamburger {
+  position: relative;
+  z-index: 50;
+  width: 28px;
+  height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 20px;
+
+  @include respond-to(md){
+    margin-right: 30px;    
+  }
+
+  @include respond-to(xl){
+    margin-right: 40px;    
+  }
+
+  span {
+    position: relative;
+    font-size: 0;
+    width: 25px;
+    height: 1px;
+    display: block;
+    background: white;
+    @include transition;
+
+    &::before,
+    &::after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px;
+      display: block;
+      background: white;
+      content: '';
+      @include transition;
+    }
+
+    &::before {
+      top: -10px;
+    }
+
+    &::after {
+      bottom: -10px;
+    }
+  }
+
+  @include when-inside('.page-header.is-opened') {
+    span {
+      background-color: transparent;
+
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

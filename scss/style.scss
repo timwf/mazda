@@ -1,0 +1,18 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import 'abstracts/variables', 'abstracts/mixins';
+
+// 2. Vendors
+@import 'vendor/normalize', 'vendor/wp-core', 'vendor/fullpage-one'; 
+
+// 3. Base stuff
+@import 'base/base', 'base/fonts', 'base/typography', 'base/helpers';
+
+// 4. Layout-related sections
+@import 'layout/header', 'layout/footer', 'layout/sixty', 'layout/sixty-six', 'layout/sixty-seven',
+'layout/sixty-nine', 'layout/eighty-nine', 'layout/zeroNine', 'layout/home', 'layout/twenty', 'layout/home-video',
+'layout/sixty-nine-vid', 'layout/zeroNine-vid', 'layout/twenty-vid';
+
+// 5. Components
+@import 'components/button', 'components/hamburger', 'components/timeline';

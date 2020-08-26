@@ -1,0 +1,32 @@
+.is-observer {
+  .reveal-text {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+
+    &__line {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+
+      span {
+        display: inline-block;
+        transform: translateY(110%) translateZ(0);
+        transition: transform 0.5s cubic-bezier(0.405, 0.005, 0, 1);
+      }
+    }
+
+    &.is-visible {
+      opacity: 1;
+
+      .reveal-text__line {
+        @include transition-sequence(-0.3s, 0.3s, 'span');
+
+        span {
+          transform: translateY(0) translateZ(0);
+          transition: transform 1.5s cubic-bezier(0.405, 0.005, 0, 1);
+        }
+      }
+    }
+  }
+}

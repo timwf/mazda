@@ -1,0 +1,95 @@
+.sixty-nine{
+
+  &__inner{
+    position: absolute;
+    top: calc(33.28% - 10px);
+    color: black;
+    margin-right: 20px;
+    max-width: 284px;
+    left: 0;
+
+    @include respond-to(md){
+      max-width: 244px;
+    }
+
+  }
+
+  &__header{
+    opacity: 0;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 10px;
+    transform: translate(0px, 30vh);
+
+    @include respond-to(sm){
+      margin-top: -28px;
+    }
+
+  }
+
+  &__date{
+    opacity: 0;
+    font-size: 12px;
+    margin-bottom: 2px;
+
+    @include respond-to(sm){
+      margin-left: -53px;
+    }
+  }
+
+  &__copy{
+    opacity: 0;
+    font-size: 14px;
+    transform: translate(0px, 30vh);
+  }
+
+  &__image-wrap{
+    margin-right: 20px;
+    height: calc(100% - 8.32%);
+    position: relative;
+  }
+
+  &__image-one{
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    bottom: 0;
+    height: 28%;
+    opacity: 0;
+    transform: translate(0px, 30vh); 
+
+    video{
+      height: 100%;
+    }
+    
+    @media (min-width: 374px){
+      width: 284px;
+      height: 28.5vh;
+      padding: 0;
+
+    }
+
+    @include respond-to(md){
+      left: 342px;
+      height: 71vh;
+      background-position: 50%;
+      width: 45vh;
+      position: absolute;
+      bottom: 3vh;
+    }
+
+    @include respond-to(md){
+      right: 11vh;
+      left: auto;
+      width: 52vh;      
+    }
+
+    @media (min-width: 1210px){
+      width: 88vh;
+      max-width: 63%;
+    }
+  }
+
+
+
+}

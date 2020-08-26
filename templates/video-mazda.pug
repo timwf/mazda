@@ -1,0 +1,28 @@
+- var page = 'Home';
+doctype html
+html.no-js.is-observer
+  include components/head.pug
+  body
+    //- include components/header.pug
+    main
+      .wrapper
+        include components/timeline.pug
+        #fullpage
+          .section   
+            include components/home-vid.pug       
+          .section.section-one 
+            include components/sixty.pug
+          .section 
+            include components/sixty-six.pug
+          .section.section-one  
+            include components/sixty-seven.pug
+          .section 
+            include components/sixty-nine-vid.pug
+          .section.section-one  
+            include components/eighty-nine.pug
+          .section
+            include components/zeroNine-vid.pug
+          .section.section-one 
+            include components/twenty-vid.pug      
+
+    include components/footer.pug

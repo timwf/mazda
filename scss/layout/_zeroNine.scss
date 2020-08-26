@@ -1,0 +1,100 @@
+.zero-nine{
+
+  &__inner{
+    position: absolute;
+    top: calc(66.56% - 10px);
+    left: 0px;
+    color: black;
+    margin-right: 20px;
+    max-width: 284px;  
+    
+    @include respond-to(md){
+      max-width: 244px;
+    }
+  }
+
+  &__header{
+    opacity: 0;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 10px;
+    transform: translate(0px, 30vh);
+
+    @include respond-to(sm){
+      margin-top: -28px;
+    }
+
+  }
+
+  &__date{
+    opacity: 0;
+    font-size: 12px;
+    margin-bottom: 2px;
+
+    @include respond-to(sm){
+      margin-left: -53px;
+    }
+  }
+
+  &__copy{
+    opacity: 0;
+    font-size: 14px;
+    transform: translate(0px, 30vh);
+  }
+
+  &__image-wrap{
+    margin-right: 20px;
+    height: calc(100% - 8.32%);
+    position: relative;
+  }
+
+
+  &__image-one{
+    position: absolute;
+    width: 100%;
+    height: 54vh;
+    height: 51vh;
+    top: calc(10.92% - 8px);    
+    right: 0;
+    background-image: url('../img/zero-nine.png');
+    background-size: cover;
+    background-position: 50%;
+    opacity: 0;
+    transform: translate(0px, 30vh); 
+    
+    @media (min-width: 459px){
+      width: 284px;
+      height: 31vh;
+      top: 10vh;
+      padding: 0;
+      left: 0;
+      right: auto;
+      
+
+    }
+
+    @include respond-to(md){
+      height: 33.5vh;
+      right: 0;
+      left: auto;
+      height: 64vh;;
+      top: auto;
+      width: 45vh;
+      position: absolute;
+      bottom: 11vh;
+      right: 11vh;
+      width: 52vh;
+    }
+
+    @include respond-to(md){
+      right: 11vh;
+      left: auto;
+      width: 52vh;    
+    }
+
+    @media (min-width: 1210px){
+      width: 83vh;
+      max-width: 63%;
+    }
+  }
+}

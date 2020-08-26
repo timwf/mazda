@@ -1,0 +1,94 @@
+.eighty-nine{
+
+  &__inner{
+    position: absolute;
+    top: calc(49.92% - 10px);
+    left: 0px;
+    color: white;
+    margin-right: 20px;
+    max-width: 284px; 
+    
+    @include respond-to(md){
+      max-width: 244px;
+    }
+  }
+
+  &__header{
+    opacity: 0;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 10px;
+    transform: translate(0px, 30vh);
+
+    @include respond-to(sm){
+      margin-top: -28px;
+    }
+
+  }
+
+  &__date{
+    opacity: 0;
+    font-size: 12px;
+    margin-bottom: 2px;
+
+    @include respond-to(sm){
+      margin-left: -53px;
+    }
+  }
+
+  &__copy{
+    opacity: 0;
+    font-size: 14px;
+    transform: translate(0px, 30vh);
+  }
+
+  &__image-wrap{
+
+    height: calc(100% - 8.32%);
+    position: relative;
+  }
+
+
+  &__image-one{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 48%;
+    width: 346px;
+    background-color: green;
+    background-image: url('../img/eighty-nine.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: translate(30vw, 0vh);
+
+    @media (min-width: 412px){
+      left: auto;
+      right: 0;
+      height: 42vh;
+      width: 75vw;
+      top: -29px;
+    }
+
+    @include respond-to(md){
+      left: 342px;
+      height: 71vh;
+      top: auto;
+      width: 45vh;
+      position: absolute;
+      bottom: 3vh;
+ 
+    }
+
+    @include respond-to(md){
+      right: 11vh;
+      left: auto;
+      width: 55vh;      
+    }
+
+    @media (min-width: 1210px){
+      width: 88vh;
+      max-width: 63%;
+    }
+  }
+}

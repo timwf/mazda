@@ -1,0 +1,73 @@
+.sixty-seven{
+
+  &__inner{
+    position: absolute;
+    top: calc(24.96% - 10px);
+    color: white;
+    margin-right: 20px;
+    max-width: 284px; 
+
+    @include respond-to(md){
+      max-width: 244px;
+    }
+
+  }
+
+  &__header{
+    opacity: 0;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 10px;
+    transform: translate(0px, 30vh);
+    color: white;
+
+    @include respond-to(sm){
+      margin-top: -28px;
+    }
+
+  }
+
+  &__date{
+    opacity: 0;
+    font-size: 12px;
+    margin-bottom: 2px;
+    color: white;
+
+    @include respond-to(sm){
+      margin-left: -53px;
+    }
+  }
+
+  &__copy{
+    opacity: 0;
+    font-size: 14px;
+    transform: translate(0px, 30vh);
+    color: white;
+  }
+
+  &__image-one{
+    position: absolute;
+    bottom: 0;
+    margin-left: -71px;
+    width: 100vw;
+    height: 70vh;
+    background-image: url("../img/sixty-seven.png");
+    background-size: cover;    
+    background-position: 90%;  
+    opacity: 0;
+    transform: translate(-100vh, 0vh);
+
+    @include respond-to(sm){
+      height: 100vh;
+      margin-left: -222px;
+      background-position-y: 56%;      
+      bottom: -27px;  
+    }
+
+    @include respond-to(xl){
+      margin-left: -362px;
+      bottom: -30px;
+      background-position: bottom;
+    }
+  }
+}

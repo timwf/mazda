@@ -1,0 +1,90 @@
+.timeline{
+  height: 100%;
+
+
+ 
+
+
+  &__container{
+    height: 100%;
+    position: absolute;
+    left: 21px;
+    z-index: 9;
+
+    @include respond-to(sm){
+      padding-top: 30px;
+      padding-bottom: 30px;
+      left: 119px;
+    }
+
+    @include respond-to(xl){
+      left: 250px;
+    }
+  }
+
+  &__year{
+    height: 4.16%;
+    width: 18px;
+    border-bottom: solid black;
+    border-width: 1px;
+    position: relative;
+
+    p{
+      position: absolute;
+      top: 4%;
+      left: 52px;
+      font-size: 12px;
+      transform: translateY(-69%);
+
+    }
+
+
+    &--active{
+      width: 29px;
+      p{
+        opacity: 1;
+      }
+    }
+
+    &:nth-child(odd){
+      width: 10px;
+      opacity: 0.5;
+    }
+
+    // @include respond-to(sm){
+    //   &:nth-child(odd){
+    //     width: 18px;
+    //     opacity: 1;
+    //   }
+
+    //   &:nth-child(even){
+    //     width: 10px;
+    //     opacity: 0.5;
+    //   }
+    // }
+
+    
+
+
+
+
+    &--dated{
+      border-bottom: none !important;
+      opacity: 1 !important;
+      p{
+        position: absolute;
+        font-size: 10px;
+        top: 4vh;
+        left: 0;
+        transform: translate(0px, -60%);        
+      }
+
+    }
+
+  }
+}
+
+
+.section-one, .section-three{
+  background-color: black;
+}

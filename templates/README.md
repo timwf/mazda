@@ -1,0 +1,1 @@
+# Pug.js templates
